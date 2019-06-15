@@ -1,16 +1,16 @@
 class Team:
-    def __init__(self, id, team_name):
-        self.id = id
+    def __init__(self, team_name):
         self.team_name = team_name
 
     def __eq__(self, other):
         return self.team_name == other.team_name
 
     def __hash__(self):
-        return hash((self.id, self.team_name))
+        return hash(self.team_name)
 
     def __repr__(self):
         return self.team_name
+
 
 class Match:
     def __init__(self, home_team, away_team):
